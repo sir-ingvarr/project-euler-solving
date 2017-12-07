@@ -24,7 +24,10 @@
         typeof taskModule === 'function' ? 
         (() => {
           console.time('taskTime')
-          taskModule();
+          for(let count = 0; count < 1000000; count ++) {
+            let b = taskModule();
+            if(count === 0) console.log(`answer: ${b}`);
+          }
           console.timeEnd('taskTime');
         })()
             : log(taskModule); 
