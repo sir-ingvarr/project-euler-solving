@@ -8,3 +8,8 @@ module.exports = () => {
   }
   return sum;  
 }
+
+/*
+*answer: 233168
+*taskTime: 5741.332ms per [1000000] iterations
+*/

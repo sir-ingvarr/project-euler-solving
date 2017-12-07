@@ -3,3 +3,7 @@ const fiboSum = (fst = 0, second = 1, sum = 0, max = 4000000, divider = 2) =>
   
 module.exports = fiboSum;
 
+/*
+*answer: 4613732
+*taskTime: 309.569ms [x1000000] iterations
+*/
