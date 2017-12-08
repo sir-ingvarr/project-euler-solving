@@ -8,15 +8,15 @@
   fs.readdir('./tasks', (err, fileList) => {
     files = fileList;
     if(err) error('Error while trying to read tasks dir ', err);
-    info('Select task to launch: ( .opentask |task_number| )');
+    info('Select task to launch: ( .task |task_number| )');
     for(let i = 0; i < fileList.length; i++) {
       log(`${fileList[i].slice(0, -3)}`);
     }
   })
 
-  let replServer = repl.start({ prompt: '--: ' });
+  let replServer = repl.start({ prompt: ':: ' });
 
-  replServer.defineCommand('opentask', {
+  replServer.defineCommand('task', {
     help: 'task number as param',
     action(number) {
       try {
